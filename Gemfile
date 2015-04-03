@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby                        '2.1.2'
 gem 'rails',                '4.2.0'
 gem 'sass-rails',           '5.0.1'
 gem 'uglifier',             '2.5.3'
@@ -15,3 +16,9 @@ group :development, :test do
   gem 'web-console', '2.0.0.beta3'
   gem 'spring',      '1.1.3'
 end
+
+group :production do
+  gem 'pg',             '0.17.1'
+  gem 'rails_12factor', '0.0.2'
+end
+
