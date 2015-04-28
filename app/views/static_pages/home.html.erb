@@ -1,15 +1,29 @@
-<%= link_to image_tag("aceLogo.svg", alt: "Logo"), '../../assets/images/aceLogo.svg' %>
+<div id="logo">
+	<%= link_to image_tag("aceLogo.svg", alt: "Logo"), '../../assets/images/aceLogo.svg' %>
+</div>
+<script>
+
+$( document ).ready(function(){
+	$("body").html("jQuery works!")
+});
+
+</script>
+<nav>
+	<ul id="menu" class="fixed">
+    	<a href="#"><li>Services</li
+    	></a><a href="#about"><li>About</li
+    	></a><a href="#contact"><li>Contact</li></a>
+    </ul>
+</nav>
 <div class="pageSection" id='services'>
 	<h2>Services</h2>
-	<%= link_to image_tag("light.jpg"), '../../assets/images/light.jpg' %>
+	<%= link_to image_tag("light.jpg"), '../../assets/images/light.jpg', id: "lightJPG" %>
 	<div id='overview'>
-		<div id="overviewDescription">
-			<h4>We trade dental equipment across North America and Central America.</h4>
-		</div>
+		<h4 id="overviewDescription">We trade dental equipment across the Americas.</h4>
 		<h5>Buy</h5>
 		<p>Check out our current <a href="#contact">listings</a>. Don't see what you are looking for? <a href="#contact">Contact us</a> and we will reach out to our network to find it for you.</p>
 		<h5>Sell</h5>
-		<h6>We liquidate entire dental offices and individual high-value products such as:</h6>
+		<p>We liquidate entire dental offices and individual high-value products such as:</p>
 		<ol>
 			<li>X-rays</li>
 			<li>Lights</li>
@@ -17,31 +31,35 @@
 			<li>Compressors</li>
 		</ol>
 	</div>
-	<div id='serviceArea'>
-		<h2>Service Area</h2>
-		<%= link_to image_tag("map.svg", alt: "Map"), '../../assets/images/map.svg' %>
-		<div id='legendNear'>
-		</div>
-		<p class="legendDescription">Free pickup and uninstallation.</p>
-		<div id='legendFar'>
-		</div>
-		<p class="legendDescription">$200 pickup and uninstallation fee.</p>
-		<div id='legendVeryFar'>
-		</div>
-		<p class="legendDescription">Pickup and uninstallation not available.</p>
-	</div>
-<div class="pageSection" id='about'>
+</div>
+<div class="pageSection" id='serviceArea'>
+	<h2>Service Area</h2>
+	<%= link_to image_tag("map.svg", alt: "Map"), '../../assets/images/map.svg', id: "map" %>
+	<ul id="legend">
+		<li>
+			<div id='legendNear' class="legendIcon">
+			</div>
+			<p class="legendDescription">Free pickup and uninstallation.</p>
+		</li>
+		<li>
+			<div id='legendFar' class="legendIcon">
+			</div>
+			<p class="legendDescription">$200 pickup and uninstallation fee.</p>
+		</li>
+		<li>
+			<div id='legendVeryFar' class="legendIcon">
+			</div>
+			<p class="legendDescription">Pickup and uninstallation not available.</p>
+		</li>
+	</ul>
+</div>
+<div class="pageSection" id='aboutImage'>
 	<h2>About</h2>
-	<%= link_to image_tag("amadeo.jpg", alt: "Amadeo Valadez"), '../../assets/images/amadeo.jpg' %>
+</div>
+<div class="pageSection" id='aboutContent'>
 	<p>We are a family owned business headquartered in Houston, TX. For over 23 years, our owner has been trading dental equipment between North America and Central America.</p>
 </div>
 <div class="pageSection" id='contact'>
 	<h2>Contact</h2>
-	Interested in: Buying Selling
-	Name
-	Email
-	Photo drag and drop
-	submit
-	
-	phone, email
+	<%= render 'layouts/leadForm' %>
 </div>

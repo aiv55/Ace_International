@@ -1,0 +1,47 @@
+<form id="newLead" action="index.html" method="post" class="dropzone">
+	<label>I am interested in:<span class="form-required">*</span></label>
+          
+	<input type="radio" id="selling" value="selling" name="interest"  checked>
+	<label for="selling" class="light">Selling</label><br>
+          
+	<input type="radio" id="buying" value="buying" name="interest">
+	<label for="buying" class="light">Buying</label><br>
+          
+	<input type="radio" id="moreInfo" value="moreInfo" name="interest">
+	<label for="moreInfo" class="light">More Information</label><br>
+          
+	<label for="name">Name<span class="form-required">*</span></label>
+	<input type="text" id="name" name="user_name">
+          
+	<label for="phone">Phone Number<span class="form-required">*</span></label>
+	<div style="clear:both;"></div>
+	<div class="phoneSeparator">(</div>
+	<div class="phoneInput">
+		<input id="phone1" type="tel" name="phone[area_code]" size="3" pattern="\d{3}" />
+	</div>
+	<div class="phoneSeparator">)</div>
+	<div class="phoneInput">
+		<input id="phone2" type="tel" name="phone[extension]" size="3" pattern="\d{3}" />
+	</div>
+	<div class="phoneSeparator">-</div>
+	<div class="phoneInput">
+		<input id="phone3" type="tel" name="phone[number]" size="4" pattern="\d{4}" />
+	</div>
+          
+	<label for="email">Email</label>
+	<input type="email" id="email" name="user_email">    
+
+	<label for="message">Message</label>
+	<textarea id="message" name="message" placeholder="How can we help you?"></textarea>
+	
+	<label for="dropzonePreview">Photos</label>
+	<div id="dropzonePreview" class="dropzone-previews">
+  		<span id="dropzoneMessage">Drag files here or click to browse.</span>
+	</div>
+	
+	<div class="fallback">
+    	<input name="file" type="file" multiple />
+  	</div>
+  	
+  	<button type="submit">Send Message</button>
+</form>      
