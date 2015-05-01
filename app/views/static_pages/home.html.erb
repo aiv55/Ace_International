@@ -1,65 +1,43 @@
-<div id="logo">
-	<%= link_to image_tag("aceLogo.svg", alt: "Logo"), '../../assets/images/aceLogo.svg' %>
-</div>
-<script>
-
-$( document ).ready(function(){
-	$("body").html("jQuery works!")
-});
-
-</script>
-<nav>
-	<ul id="menu" class="fixed">
-    	<a href="#"><li>Services</li
-    	></a><a href="#about"><li>About</li
-    	></a><a href="#contact"><li>Contact</li></a>
-    </ul>
-</nav>
-<div class="pageSection" id='services'>
+<section id='services'>
 	<h2>Services</h2>
-	<%= link_to image_tag("light.jpg"), '../../assets/images/light.jpg', id: "lightJPG" %>
-	<div id='overview'>
-		<h4 id="overviewDescription">We trade dental equipment across the Americas.</h4>
-		<h5>Buy</h5>
+		<h3>Buy</h3>
 		<p>Check out our current <a href="#contact">listings</a>. Don't see what you are looking for? <a href="#contact">Contact us</a> and we will reach out to our network to find it for you.</p>
-		<h5>Sell</h5>
+		<h3>Sell</h3>
 		<p>We liquidate entire dental offices and individual high-value products such as:</p>
-		<ol>
+		<ul>
 			<li>X-rays</li>
 			<li>Lights</li>
 			<li>Chairs</li>
 			<li>Compressors</li>
-		</ol>
-	</div>
-</div>
-<div class="pageSection" id='serviceArea'>
+		</ul>
+</section>
+<section id='service-area'>
 	<h2>Service Area</h2>
-	<%= link_to image_tag("map.svg", alt: "Map"), '../../assets/images/map.svg', id: "map" %>
+	<%= image_tag("map.svg", :alt => "Locations in Texas get free pickup and uninstallation, the bordering states require a $200 fee, and pick and uninstallation is not available elsewhere.") %>
 	<ul id="legend">
 		<li>
-			<div id='legendNear' class="legendIcon">
+			<div id='near' class="legend-icon">
 			</div>
-			<p class="legendDescription">Free pickup and uninstallation.</p>
+			<p class="legend-desc">Free pickup and uninstallation.</p>
 		</li>
 		<li>
-			<div id='legendFar' class="legendIcon">
+			<div id='far' class="legend-icon">
 			</div>
-			<p class="legendDescription">$200 pickup and uninstallation fee.</p>
+			<p class="legend-desc">$200 pickup and uninstallation fee.</p>
 		</li>
 		<li>
-			<div id='legendVeryFar' class="legendIcon">
+			<div id='very-far' class="legend-icon">
 			</div>
-			<p class="legendDescription">Pickup and uninstallation not available.</p>
+			<p class="legend-desc">Pickup and uninstallation not available.</p>
 		</li>
 	</ul>
-</div>
-<div class="pageSection" id='aboutImage'>
+</section>
+<section id='about'>
 	<h2>About</h2>
-</div>
-<div class="pageSection" id='aboutContent'>
+	<%= image_tag("amadeo.jpg", :alt => "A picture of the owner of Ace International holding a 4-foot long fish he caught.") %>
 	<p>We are a family owned business headquartered in Houston, TX. For over 23 years, our owner has been trading dental equipment between North America and Central America.</p>
-</div>
-<div class="pageSection" id='contact'>
+</section>
+<section id='contact'>
 	<h2>Contact</h2>
 	<%= render 'layouts/leadForm' %>
-</div>
+</section>

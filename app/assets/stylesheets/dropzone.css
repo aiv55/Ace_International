@@ -3,6 +3,7 @@
  * Copyright (c) 2012 Matias Meno <m@tias.me>
  */
 #dropzonePreview {
+  display: none;
   width: 100%;
   height: 150px;
   border-radius: 4px;
@@ -12,6 +13,10 @@
   margin: 5px 5px 5px 0;
   text-align: center;
   line-height: 150px;
+}
+
+#dropzonePreview:hover {
+  background-color: #F2F2F2;
 }
 
 #dropzoneMessage {

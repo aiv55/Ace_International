@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Ace International</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300|Varela+Round' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -10,7 +10,7 @@
   </head>
   <body>
     <%= render 'layouts/header' %>
-    <div class="container">
+    <div id="body-content">
       <%= yield %>
     </div>
     <%= render 'layouts/footer' %>

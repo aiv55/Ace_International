@@ -1,4 +1,175 @@
-/* General Theme */
+//*************************************************
+//  Variables
+//*************************************************
+
+//-------------------------------------------------
+//    Fonts
+//-------------------------------------------------
+
+$base-font-stack          : 'Open Sans', Helvetica, sans-serif;
+$heading-font-stack       : 'Varela Round', Arial, serif;
+
+//-------------------------------------------------
+//    Colors
+//-------------------------------------------------
+
+$base-text-color          : #3A3D41;
+$heading-text-color       : #5A5D60;
+
+$base-link-color          : #4f7389;
+$base-link-hover-color    : #849DAC;
+
+$background-light-color   : rgba(240,240,255,0.9);
+$background-dark-color    : rgba(215,215,245,0.3);
+$footer-light-color       : rgba(240,240,255,0.7);
+$footer-dark-color        : rgba(240,240,255,0.6);
+
+$map-near-color           : #4a506d;
+$map-far-color            : #22aad2;
+$map-very-far-color       : #E0E0E0;
+
+//-------------------------------------------------
+//    Texture Paths
+//-------------------------------------------------
+
+$texture-light            : "light_noise_diagonal.png";
+$texture-dark             : "noisy_net.png";
+
+//-------------------------------------------------
+//    Media Query Breaks
+//-------------------------------------------------
+
+//*************************************************
+//  Mixins
+//*************************************************
+
+@mixin textured-radial-gradient($pattern, $light, $dark) {
+  background: -webkit-radial-gradient(#{$light}, #{$dark}), url(#{$pattern}); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(#{$light}, #{$dark}), url(#{$pattern}); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#{$light}, #{$dark}), url(#{$pattern}); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#{$light}, #{$dark}), url(#{$pattern}); /* Standard syntax */
+}
+// @mixin border-radius($radius) {
+  // -webkit-border-radius: $radius;
+     // -moz-border-radius: $radius;
+      // -ms-border-radius: $radius;
+          // border-radius: $radius;
+// }
+// .box { @include textured-radial-gradient($background-light-color, $background-dark-color); }
+
+//*************************************************
+//  General Typography
+//*************************************************
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  margin: 3% 10px;
+  padding: 10px 0;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+h2,
+h3 {
+  font-family: $heading-font-stack;
+  color: $heading-text-color;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.4em;
+  margin-top: 40px;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.7em;
+}
+
+a {
+  color: $base-link-color;
+    &:hover {
+      color: $base-link-hover-color;
+      text-decoration: none;
+    }
+}
+
+//*************************************************
+//  Header
+//*************************************************
+
+//-------------------------------------------------
+//    Logo
+//-------------------------------------------------
+
+#logo {
+  margin: 2% 7%;
+  padding-top: 30px;
+  width: 86%;
+}
+
+//-------------------------------------------------
+//    Navigation Menu
+//-------------------------------------------------
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  z-index: 9999;
+    & a {
+      font-family: $heading-font-stack;
+      font-weight: 700;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+    & li {
+      list-style: none;
+      width: 33.3333%;
+      padding: 10px 2% 0px 2%;
+      margin: 0;
+      display: inline-block;
+      text-align: center;
+    }
+}
+
+nav a:focus,
+nav a:active {
+    outline: none;
+}
+
+// Menu fixed to the top on scroll
+.fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 12px 10px -13px $base-link-color;
+    & li {
+      background-color: white;
+    }
+}
+
+// Adjust body top margin to prevent content jumping when nav gets fix
+.fixed-nav {
+  margin-top: 34px;
+}
+
+//*************************************************
+//  Body
+//*************************************************
+
+//-------------------------------------------------
+//    Base
+//-------------------------------------------------
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -7,108 +178,45 @@
 
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  color: #384047;
+  font-family: $base-font-stack;
+  color: $base-text-color;
 }
 
-.pageSection {
+section {
   padding: 15px;
 }
 
-.pageSection h2 {
-  text-align: center;
-  line-height: 2.5em;
-  margin: 0;
+//-------------------------------------------------
+//    Services
+//-------------------------------------------------
+
+#services {
+  box-shadow: inset 0px 12px 10px -15px $base-link-color;
+  @include textured-radial-gradient($texture-light, $background-light-color, $background-dark-color);
 }
 
-/* General Typography */
-#overviewDescription {
-  font-size: 1.0em;
-  font-weight: 400;
-  margin: 0 0 10px 0;
-  text-align: center;
-}
+//-------------------------------------------------
+//    Service Area (map)
+//-------------------------------------------------
 
-h5 {
-  margin: 25px 0 10px 0;
-}
-
-p {
-  margin: 5px 0 5px 0;
-  font-weight: 300;
-}
-
-/* Header */
-#logo {
+#service-area img {
   width: 100%;
-  height: 100px;
+}
+
+#legend {
   margin: 0;
   padding: 0;
+    & li {
+      padding: 0;
+      margin-top: 10px;
+      width: 100%;
+      height: 35px;
+      text-align: left;
+      list-style: none;
+    }
 }
 
-#logo img {
-  width: 90%;
-  position: relative;
-  margin: auto;
-  top: 30px;
-  left: 5%;
-  right: 5%;
-  bottom: 0;
-}
-
-
-/* Navigation */
-#menu {
-  margin: 0 5%;
-  padding: 0;
-  text-align: justify;
-}
-
-#menu li {
-  list-style: none;
-  width: 30%;
-  padding: 10px 2% 0px 2%;
-  margin: 0;
-  display: inline-block;
-  text-align: center;
-}
-
-#menu.fixed {
-  width: 100%;
-  margin: 0;
-  position: fixed;
-  top: 0;
-  left: auto;
-  right: auto;
-  text-align: center;
-}
-
-#menu.fixed li {
-  width: 33.3333%;
-  background-color: white;
-  box-shadow: 0px 12px 10px -15px #1B26CC;
-}
-
-#menu:after {
-    display: inline-block;
-    width:100%;
-    height: 0;
-    content:'';
-}
-
-#menu a {
-  text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  color: #14324D;
-}
-
-/* Map */
-#map img {
-  width: 100%;
-}
-
-.legendIcon {
+.legend-icon {
   width: 20px;
   height: 20px;
   border-radius: 5px;
@@ -116,76 +224,51 @@ p {
   margin: 5px;
 }
 
-.legendDescription {
+#near,
+#far,
+#very-far {
+  border: 1px solid #646464;
+}
+
+#near {
+  background-color: $map-near-color;
+}
+
+#far {
+  background-color: $map-far-color;
+}
+
+#very-far {
+  background-color: $map-very-far-color;
+}
+
+.legend-desc {
   text-align: left;
   margin: 0;
   padding-top: 5px;
   font-size: 0.8em;
+  line-height: 1em;
 }
 
-#legend {
-  margin: 0;
-  padding: 0;
+//-------------------------------------------------
+//    About
+//-------------------------------------------------
+
+#about {
+  @include textured-radial-gradient($texture-light, $background-light-color, $background-dark-color);
 }
 
-#legend li {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 35px;
-  text-align: left;
-  list-style: none;
+#about img {
+  margin: 0 20%;
+  width: 60%;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px -5px $base-link-color;
 }
 
-#legendNear {
-  background-color: #0000ff;
-  border: 1px solid #646464;
-}
+//-------------------------------------------------
+//    Contact (form)
+//-------------------------------------------------
 
-#legendFar {
-  background-color: #00ffff;
-  border: 1px solid #646464;
-}
-
-#legendVeryFar {
-  background-color: #E0E0E0;
-  border: 1px solid #646464;
-}
-
-/* page: Home */
-#lightJPG img {
-  width: 50%;
-}
-
-#lightJPG {
-  display: none;
-}
-
-#services {
-  background: -webkit-radial-gradient(#F0F0FA, #E4E4ED); /* Safari 5.1 to 6.0 */
-  background: -o-radial-gradient(#F0F0FA, #E4E4ED); /* For Opera 11.6 to 12.0 */
-  background: -moz-radial-gradient(#F0F0FA, #E4E4ED); /* For Firefox 3.6 to 15 */
-  background: radial-gradient(#F0F0FA, #E4E4ED); /* Standard syntax */
-}
-
-#aboutImage { 
-  background: url("amadeo.jpg") no-repeat; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  min-height: 300px;
-  padding: 0;
-}
-
-#aboutContent {
-  background: -webkit-radial-gradient(#F0F0FA, #E4E4ED); /* Safari 5.1 to 6.0 */
-  background: -o-radial-gradient(#F0F0FA, #E4E4ED); /* For Opera 11.6 to 12.0 */
-  background: -moz-radial-gradient(#F0F0FA, #E4E4ED); /* For Firefox 3.6 to 15 */
-  background: radial-gradient(#F0F0FA, #E4E4ED); /* Standard syntax */
-}
-
-/* Lead Form */
 form {
   max-width: 300px;
   margin: 0 auto;
@@ -194,17 +277,19 @@ form {
   border-radius: 8px;
 }
 
-h1 {
-  margin: 0 0 30px 0;
-  text-align: center;
+label {
+  display: block;
+  margin: 20px 0 8px 0;
+    &.light {
+      font-weight: 300;
+      display: inline;
+    }
 }
 
 input[type="text"],
-input[type="date"],
 input[type="email"],
 input[type="tel"],
-textarea,
-select {
+textarea {
   background: rgba(255,255,255,0.1);
   border: none;
   font-size: 16px;
@@ -233,24 +318,16 @@ input[type="checkbox"] {
 #phone2,
 #phone3 {
   padding: 5px;
+  margin: 10px 0;
 }
 
-#phone1 {
-  width: 40px;
-}
-
+#phone1,
 #phone2 {
   width: 40px;
 }
 
 #phone3 {
   width: 50px;
-}
-
-select {
-  padding: 6px;
-  height: 32px;
-  border-radius: 2px;
 }
 
 button {
@@ -268,68 +345,36 @@ button {
   margin-bottom: 10px;
 }
 
-label {
-  display: block;
-  margin: 20px 0 8px 0;
-}
+//*************************************************
+//  Footer
+//*************************************************
 
-label.light {
-  font-weight: 300;
-  display: inline;
-}
-
-/* Footer */
-
-#footer {
+footer {
   width: 100%;
   height: 150px;
-  background: -webkit-radial-gradient(white, #EBEBEB); /* Safari 5.1 to 6.0 */
-  background: -o-radial-gradient(white, #EBEBEB); /* For Opera 11.6 to 12.0 */
-  background: -moz-radial-gradient(white, #EBEBEB); /* For Firefox 3.6 to 15 */
-  background: radial-gradient(white #EBEBEB); /* Standard syntax */
-}
-
-#contact-info {
-  margin: 0;
-  padding: 20px 5% 10px 5%;
-}
-
-#legal {
-  margin: 0;
-  padding: 10px 5% 20px 5%;
-}
-
-#contact-info li,
-#legal li {
-  list-style: none;
-  padding: 2%;
-  margin: 0;
-  text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size: 0.7em;
-  color: #1C5A91;
-  padding: 0;
-  margin: 0;
-}
-
-#contact-info a,
-#legal a {
-  font-weight: 600;
-  color: #1C5A91;
-  text-decoration: none;
-}
-
-#contact-info a:hover,
-#legal a:hover {
-  text-decoration: underline;
-}
-
-/* Media Queries */
-@media screen and (min-width: 480px) {
-
-  form {
-    max-width: 480px;
-  }
-
+  box-shadow: inset 0px 12px 10px -15px $base-link-color;
+  @include textured-radial-gradient($texture-dark, $footer-light-color, $footer-dark-color);
+    & ul {
+      margin: 0;
+      padding: 20px 5% 10px 5%;
+    }
+    & li {
+      list-style: none;
+      padding: 2%;
+      text-decoration: none;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-size: 0.7em;
+      padding: 0;
+      margin: 0;
+      color: white;
+    }
+    & a {
+      font-weight: 400;
+      color: white;
+      text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+    }
 }
