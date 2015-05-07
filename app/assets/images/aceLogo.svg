@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="350.74658"
+   height="35.645874"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r"
+   sodipodi:docname="Ace Logo.svg"
+   inkscape:export-filename="C:\Users\valadezi\Desktop\Belongs in other computer\drawing.png"
+   inkscape:export-xdpi="908.70001"
+   inkscape:export-ydpi="908.70001">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient4051">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0"
+         id="stop4053" />
+      <stop
+         style="stop-color:#ff0000;stop-opacity:0;"
+         offset="1"
+         id="stop4055" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4031">
+      <stop
+         style="stop-color:#00003b;stop-opacity:1;"
+         offset="0"
+         id="stop4033" />
+      <stop
+         id="stop4039"
+         offset="0.69325846"
+         style="stop-color:#000000;stop-opacity:0.49803922;" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop4035" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3979">
+      <stop
+         id="stop3987"
+         offset="0"
+         style="stop-color:#ff0000;stop-opacity:1;" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0.49345132"
+         offset="1"
+         id="stop3983" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3967">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3969" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop3971" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4031"
+       id="linearGradient4037"
+       x1="191.96577"
+       y1="437.2998"
+       x2="842.97064"
+       y2="630.43695"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-41.176471,14.705882)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4051"
+       id="linearGradient4057"
+       x1="181.20448"
+       y1="542.89172"
+       x2="-109.82492"
+       y2="571.32306"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.02"
+     inkscape:cx="509.47397"
+     inkscape:cy="-163.90322"
+     inkscape:document-units="pc"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-left="3"
+     fit-margin-top="3"
+     fit-margin-right="3"
+     fit-margin-bottom="3"
+     inkscape:window-width="1366"
+     inkscape:window-height="720"
+     inkscape:window-x="-2"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-102.71429,-488.8125)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient4057);fill-opacity:1;stroke:none"
+       x="105.71429"
+       y="520.93359"
+       id="text2985"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2987"
+         x="105.71429"
+         y="520.93359"
+         style="font-style:normal;font-weight:bold;-inkscape-font-specification:'Sans Bold';opacity:1;fill:url(#linearGradient4057);fill-opacity:1;stroke:none">ACE</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3993"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+         id="flowRegion3995"><rect
+           id="rect3997"
+           width="69.148933"
+           height="42.553192"
+           x="-63.829788"
+           y="268.31964" /></flowRegion><flowPara
+         id="flowPara3999" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4019"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+         id="flowRegion4021"><rect
+           id="rect4023"
+           width="6.8627453"
+           height="422.54901"
+           x="544.11768"
+           y="282.75433" /></flowRegion><flowPara
+         id="flowPara4025" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient4037);fill-opacity:1;stroke:none"
+       x="200.98039"
+       y="520.98962"
+       id="text4027"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4029"
+         x="200.98039"
+         y="520.98962"
+         style="fill:url(#linearGradient4037);fill-opacity:1">International</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4041"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+         id="flowRegion4043"><rect
+           id="rect4045"
+           width="372.54901"
+           height="175.49019"
+           x="211.76471"
+           y="408.24454" /></flowRegion><flowPara
+         id="flowPara4047" /></flowRoot>  </g>
+</svg>

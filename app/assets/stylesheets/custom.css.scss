@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* General Theme */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -55,8 +56,30 @@ p {
   right: 5%;
   bottom: 0;
 }
+=======
+//*************************************************
+//  Variables
+//*************************************************
 
+//-------------------------------------------------
+//    Fonts
+//-------------------------------------------------
 
+$base-font-stack          : sans-serif;//'Open Sans', Helvetica, sans-serif;
+$heading-font-stack       : sans-serif;//'Varela Round', Arial, serif;
+
+//-------------------------------------------------
+//    Colors
+//-------------------------------------------------
+
+$base-text-color          : #3A3D41;
+$heading-text-color       : #5A5D60;
+>>>>>>> staticPages
+
+$base-link-color          : #4f7389;
+$base-link-hover-color    : #849DAC;
+
+<<<<<<< HEAD
 /* Navigation */
 #menu {
   margin: 0 5%;
@@ -333,3 +356,396 @@ label.light {
   }
 
 }
+=======
+$background-light-color   : rgba(240,240,255,0.9);
+$background-dark-color    : rgba(215,215,245,0.3);
+$footer-light-color       : rgba(140,140,155,0.7);
+$footer-dark-color        : rgba(140,140,155,0.6);
+
+$map-near-color           : #4a506d;
+$map-far-color            : #22aad2;
+$map-very-far-color       : #E0E0E0;
+
+//-------------------------------------------------
+//    Texture Paths
+//-------------------------------------------------
+
+$texture-light            : "light_noise_diagonal.png";
+$texture-dark             : "light_noise_diagonal.png";//"noisy_net.png";
+
+//-------------------------------------------------
+//    Media Query Breaks
+//-------------------------------------------------
+
+$first-break              : 383;
+
+//*************************************************
+//  Mixins
+//*************************************************
+
+@mixin textured-radial-gradient($pattern, $light, $dark) {
+  background: -webkit-radial-gradient(#{$light}, #{$dark}), url(#{$pattern}); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(#{$light}, #{$dark}), url(#{$pattern}); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#{$light}, #{$dark}), url(#{$pattern}); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#{$light}, #{$dark}), url(#{$pattern}); /* Standard syntax */
+}
+
+//*************************************************
+//  General Typography
+//*************************************************
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  margin: 3% 10px;
+  padding: 10px 0;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+h2,
+h3 {
+  font-family: $heading-font-stack;
+  color: $heading-text-color;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.4em;
+  margin-top: 40px;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.7em;
+}
+
+a {
+  color: $base-link-color;
+    &:hover {
+      color: $base-link-hover-color;
+      text-decoration: none;
+    }
+}
+
+//*************************************************
+//  Header
+//*************************************************
+
+//-------------------------------------------------
+//    Logo
+//-------------------------------------------------
+
+#logo-wrapper {
+  text-align: center;
+}
+
+#logo {
+  margin: 2% 7%;
+  padding-top: 30px;
+  width: 86%;
+  max-width: 600px;
+}
+
+//-------------------------------------------------
+//    Navigation Menu
+//-------------------------------------------------
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  text-align: center;
+  z-index: 9999;
+    & a {
+      font-family: $heading-font-stack;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    & li {
+      list-style: none;
+      min-width: 70px;
+      width: 33.3333%;
+      max-width: 150px;
+      padding: 10px 2% 0px 2%;
+      margin: 0 auto;
+      display: inline-block;
+      text-align: center;
+    }
+}
+
+nav a:focus,
+nav a:active {
+    outline: none;
+}
+
+// Menu fixed to the top on scroll
+.fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 12px 10px -12px $base-link-color;
+}
+
+// Adjust body top margin to prevent content jumping when nav gets fix
+.fixed-nav {
+  margin-top: 27px;
+}
+
+//*************************************************
+//  Body
+//*************************************************
+
+//-------------------------------------------------
+//    Base
+//-------------------------------------------------
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $base-font-stack;
+  color: $base-text-color;
+}
+
+section,
+footer {
+  padding: 15px;
+}
+
+//-------------------------------------------------
+//    Services
+//-------------------------------------------------
+
+#services {
+  box-shadow: inset 0px 12px 10px -15px $base-link-color;
+  @include textured-radial-gradient($texture-light, $background-light-color, $background-dark-color);
+}
+
+#services-wrapper,
+#map-wrapper,
+#about-wrapper,
+#footer-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+//-------------------------------------------------
+//    Service Area (map)
+//-------------------------------------------------
+
+#service-area img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 550px;
+}
+
+#legend {
+  margin: 0;
+  padding: 0;
+    & li {
+      padding: 0;
+      margin-top: 10px;
+      width: 100%;
+      height: 35px;
+      text-align: left;
+      list-style: none;
+    }
+}
+
+.legend-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  float: left;
+  margin: 5px;
+}
+
+#near,
+#far,
+#very-far {
+  border: 1px solid #646464;
+}
+
+#near {
+  background-color: $map-near-color;
+}
+
+#far {
+  background-color: $map-far-color;
+}
+
+#very-far {
+  background-color: $map-very-far-color;
+}
+
+.legend-desc {
+  text-align: left;
+  margin: 0;
+  padding-top: 5px;
+  font-size: 0.8em;
+  line-height: 1em;
+}
+
+//-------------------------------------------------
+//    About
+//-------------------------------------------------
+
+#about {
+  @include textured-radial-gradient($texture-light, $background-light-color, $background-dark-color);
+}
+
+#about img {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  max-width: 200px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px -5px $base-link-color;
+}
+
+//-------------------------------------------------
+//    Contact (form)
+//-------------------------------------------------
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px 5px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin: 20px 0 8px 0;
+    &.light {
+      font-weight: 300;
+      display: inline;
+    }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 10px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+}
+
+input[type="text"],
+input[type="email"] {
+  max-width: 250px;
+}
+
+input[type="email"] {
+  margin: 5px 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 4px 8px 0;
+}
+
+.phoneSeparator,
+.phoneInput {
+  display: inline;
+  width: 50px;
+}
+
+#phone1,
+#phone2,
+#phone3 {
+  padding: 5px;
+  margin: 10px 0;
+}
+
+#phone1,
+#phone2 {
+  width: 40px;
+}
+
+#phone3 {
+  width: 50px;
+}
+
+#phone-wrapper,
+#email-wrapper {
+  display: inline-block;
+}
+
+#phone-wrapper {
+  margin-right: 20px;
+}
+
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #4bc970;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 15px;
+  width: 100%;
+  border: 1px solid #3ac162;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+
+//*************************************************
+//  Footer
+//*************************************************
+
+footer {
+  width: 100%;
+  height: 150px;
+  box-shadow: inset 0px 12px 10px -15px $base-link-color;
+  @include textured-radial-gradient($texture-dark, $footer-light-color, $footer-dark-color);
+    & ul {
+      margin: 0;
+      padding: 20px 0 10px 0;
+    }
+    & li {
+      list-style: none;
+      padding: 2%;
+      text-decoration: none;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-size: 0.7em;
+      padding: 0;
+      margin: 0;
+      color: white;
+    }
+    & a {
+      font-weight: 400;
+      color: white;
+      text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+    }
+}
+>>>>>>> staticPages
