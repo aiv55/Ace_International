@@ -1,5 +1,3 @@
-$( document ).ready(function(){
-	
 	//show dropzone field
 	$('#dropzonePreview').show();
 	
@@ -46,5 +44,3 @@ $( document ).ready(function(){
 			$('#email').focus();
 		};
 	}); //end keyup event
-	
-}); //end ready

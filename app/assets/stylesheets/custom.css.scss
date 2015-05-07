@@ -6,8 +6,8 @@
 //    Fonts
 //-------------------------------------------------
 
-$base-font-stack          : 'Open Sans', Helvetica, sans-serif;
-$heading-font-stack       : 'Varela Round', Arial, serif;
+$base-font-stack          : sans-serif;//'Open Sans', Helvetica, sans-serif;
+$heading-font-stack       : sans-serif;//'Varela Round', Arial, serif;
 
 //-------------------------------------------------
 //    Colors
@@ -21,8 +21,8 @@ $base-link-hover-color    : #849DAC;
 
 $background-light-color   : rgba(240,240,255,0.9);
 $background-dark-color    : rgba(215,215,245,0.3);
-$footer-light-color       : rgba(240,240,255,0.7);
-$footer-dark-color        : rgba(240,240,255,0.6);
+$footer-light-color       : rgba(140,140,155,0.7);
+$footer-dark-color        : rgba(140,140,155,0.6);
 
 $map-near-color           : #4a506d;
 $map-far-color            : #22aad2;
@@ -33,11 +33,13 @@ $map-very-far-color       : #E0E0E0;
 //-------------------------------------------------
 
 $texture-light            : "light_noise_diagonal.png";
-$texture-dark             : "noisy_net.png";
+$texture-dark             : "light_noise_diagonal.png";//"noisy_net.png";
 
 //-------------------------------------------------
 //    Media Query Breaks
 //-------------------------------------------------
+
+$first-break              : 383;
 
 //*************************************************
 //  Mixins
@@ -49,13 +51,6 @@ $texture-dark             : "noisy_net.png";
   background: -moz-radial-gradient(#{$light}, #{$dark}), url(#{$pattern}); /* For Firefox 3.6 to 15 */
   background: radial-gradient(#{$light}, #{$dark}), url(#{$pattern}); /* Standard syntax */
 }
-// @mixin border-radius($radius) {
-  // -webkit-border-radius: $radius;
-     // -moz-border-radius: $radius;
-      // -ms-border-radius: $radius;
-          // border-radius: $radius;
-// }
-// .box { @include textured-radial-gradient($background-light-color, $background-dark-color); }
 
 //*************************************************
 //  General Typography
@@ -109,10 +104,15 @@ a {
 //    Logo
 //-------------------------------------------------
 
+#logo-wrapper {
+  text-align: center;
+}
+
 #logo {
   margin: 2% 7%;
   padding-top: 30px;
   width: 86%;
+  max-width: 600px;
 }
 
 //-------------------------------------------------
@@ -122,19 +122,22 @@ a {
 nav ul {
   margin: 0;
   padding: 0;
+  background-color: white;
   text-align: center;
   z-index: 9999;
     & a {
       font-family: $heading-font-stack;
       font-weight: 700;
-      font-size: 0.9em;
+      font-size: 14px;
       text-decoration: none;
     }
     & li {
       list-style: none;
+      min-width: 70px;
       width: 33.3333%;
+      max-width: 150px;
       padding: 10px 2% 0px 2%;
-      margin: 0;
+      margin: 0 auto;
       display: inline-block;
       text-align: center;
     }
@@ -151,15 +154,12 @@ nav a:active {
   position: fixed;
   top: 0;
   left: 0;
-  box-shadow: 0px 12px 10px -13px $base-link-color;
-    & li {
-      background-color: white;
-    }
+  box-shadow: 0px 12px 10px -12px $base-link-color;
 }
 
 // Adjust body top margin to prevent content jumping when nav gets fix
 .fixed-nav {
-  margin-top: 34px;
+  margin-top: 27px;
 }
 
 //*************************************************
@@ -182,7 +182,8 @@ body {
   color: $base-text-color;
 }
 
-section {
+section,
+footer {
   padding: 15px;
 }
 
@@ -195,12 +196,23 @@ section {
   @include textured-radial-gradient($texture-light, $background-light-color, $background-dark-color);
 }
 
+#services-wrapper,
+#map-wrapper,
+#about-wrapper,
+#footer-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 //-------------------------------------------------
 //    Service Area (map)
 //-------------------------------------------------
 
 #service-area img {
+  display: block;
+  margin: 0 auto;
   width: 100%;
+  max-width: 550px;
 }
 
 #legend {
@@ -259,8 +271,10 @@ section {
 }
 
 #about img {
-  margin: 0 20%;
+  display: block;
+  margin: 0 auto;
   width: 60%;
+  max-width: 200px;
   border-radius: 5px;
   box-shadow: 0px 5px 5px -5px $base-link-color;
 }
@@ -270,7 +284,7 @@ section {
 //-------------------------------------------------
 
 form {
-  max-width: 300px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 10px 5px;
   background: #f4f7f8;
@@ -303,6 +317,15 @@ textarea {
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
 }
 
+input[type="text"],
+input[type="email"] {
+  max-width: 250px;
+}
+
+input[type="email"] {
+  margin: 5px 0;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
   margin: 0 4px 8px 0;
@@ -330,6 +353,15 @@ input[type="checkbox"] {
   width: 50px;
 }
 
+#phone-wrapper,
+#email-wrapper {
+  display: inline-block;
+}
+
+#phone-wrapper {
+  margin-right: 20px;
+}
+
 button {
   padding: 19px 39px 18px 39px;
   color: #FFF;
@@ -337,7 +369,7 @@ button {
   font-size: 18px;
   text-align: center;
   font-style: normal;
-  border-radius: 5px;
+  border-radius: 15px;
   width: 100%;
   border: 1px solid #3ac162;
   border-width: 1px 1px 3px;
@@ -356,7 +388,7 @@ footer {
   @include textured-radial-gradient($texture-dark, $footer-light-color, $footer-dark-color);
     & ul {
       margin: 0;
-      padding: 20px 5% 10px 5%;
+      padding: 20px 0 10px 0;
     }
     & li {
       list-style: none;

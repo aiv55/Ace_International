@@ -1,41 +1,44 @@
 <section id='services'>
 	<h2>Services</h2>
-		<h3>Buy</h3>
-		<p>Check out our current <a href="#contact">listings</a>. Don't see what you are looking for? <a href="#contact">Contact us</a> and we will reach out to our network to find it for you.</p>
-		<h3>Sell</h3>
-		<p>We liquidate entire dental offices and individual high-value products such as:</p>
-		<ul>
-			<li>X-rays</li>
-			<li>Lights</li>
-			<li>Chairs</li>
-			<li>Compressors</li>
-		</ul>
+		<div id="services-wrapper">
+			<h3>Buy</h3>
+			<p>Check out our current <a href="#contact">listings</a>. Don't see what you are looking for? <a href="#contact">Contact us</a> and we will reach out to our network to find it for you.</p>
+			<h3>Sell</h3>
+			<p>We liquidate entire dental offices and individual high-value products such as:</p>
+			<ul>
+				<li>X-rays</li>
+				<li>Lights</li>
+				<li>Chairs</li>
+				<li>Compressors</li>
+			</ul>
+		</div>
 </section>
 <section id='service-area'>
 	<h2>Service Area</h2>
-	<%= image_tag("map.svg", :alt => "Locations in Texas get free pickup and uninstallation, the bordering states require a $200 fee, and pick and uninstallation is not available elsewhere.") %>
-	<ul id="legend">
-		<li>
-			<div id='near' class="legend-icon">
-			</div>
-			<p class="legend-desc">Free pickup and uninstallation.</p>
-		</li>
-		<li>
-			<div id='far' class="legend-icon">
-			</div>
-			<p class="legend-desc">$200 pickup and uninstallation fee.</p>
-		</li>
-		<li>
-			<div id='very-far' class="legend-icon">
-			</div>
-			<p class="legend-desc">Pickup and uninstallation not available.</p>
-		</li>
-	</ul>
+	<div id="map-wrapper">
+		<%= image_tag("map.svg", :alt => "Locations in Texas get free pickup and uninstallation, the bordering states require a $200 fee, and pick and uninstallation is not available elsewhere.") %>
+		<ul id="legend">
+			<li>
+				<div id='near' class="legend-icon"></div>
+				<p class="legend-desc">Free pickup and uninstallation.</p>
+			</li>
+			<li>
+				<div id='far' class="legend-icon"></div>
+				<p class="legend-desc">$200 pickup and uninstallation fee.</p>
+			</li>
+			<li>
+				<div id='very-far' class="legend-icon"></div>
+				<p class="legend-desc">Pickup and uninstallation not available.</p>
+			</li>
+		</ul>
+	</div>
 </section>
 <section id='about'>
 	<h2>About</h2>
-	<%= image_tag("amadeo.jpg", :alt => "A picture of the owner of Ace International holding a 4-foot long fish he caught.") %>
-	<p>We are a family owned business headquartered in Houston, TX. For over 23 years, our owner has been trading dental equipment between North America and Central America.</p>
+	<div id="about-wrapper">
+		<%= image_tag("amadeo.jpg", :alt => "A picture of the owner of Ace International holding a 4-foot long fish he caught.") %>
+		<p>We are a family owned business headquartered in Houston, TX. For over 23 years, our owner has been trading dental equipment between North America and Central America.</p>
+	</div>
 </section>
 <section id='contact'>
 	<h2>Contact</h2>
